@@ -19,7 +19,7 @@ namespace NetworkSync.Core
         public bool IsSynchronizationComplete { get; private set; } = false;
 
         /// <summary>Last state that was successfully synced (sent or received).</summary>
-        protected TState? LastSyncedState { get; private set; }
+        protected TState? LastSyncedState { get; set; }
 
         /// <summary>Client id that has authority over this object. Defaults to the network object owner.</summary>
         public virtual ulong AuthoritativeClientId => OwnerClientId;
