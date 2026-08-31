@@ -22,6 +22,9 @@ It also includes a shared timing and latency system based on the RFC 6298 round-
 - **Interpolated layer.** Buffers what remotes receive and interpolates it, so motion stays smooth under latency.
 - **Transform sync.** Synchronizes position, rotation, and scale with smoothing and teleport support. It can sync in world space or relative to an anchor — a moving platform, vehicle, or elevator — so relative motion works with or without Unity parenting and stays correct while the anchor itself moves.
 - **Timing and latency services.** A shared clock and round-trip estimation used by every sync behaviour.
+- **Game time module (`NetworkSync.GameTime`).** `SyncedClock`, networked scaled `NetworkGameTime`, and `NetworkDeadline` for absolute deadlines on the game clock axis.
+
+> **Note:** `NetworkSync.Core.Timing` (NGO tick/interpolation time) and `NetworkSync.GameTime` (scaled gameplay seconds) are different clocks.
 
 ---
 

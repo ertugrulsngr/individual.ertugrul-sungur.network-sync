@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-08-31
+
+### Added
+
+- `NetworkSync.GameTime` module: `SyncedClock`, `NetworkGameTime`, and `NetworkDeadline`.
+- Play-mode inspector drawer for `NetworkDeadline`.
+
+## [0.1.0]
+
 ### Changed
 
 - Authority send runs on a configurable network update stage instead of the time-service tick event.

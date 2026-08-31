@@ -1,6 +1,6 @@
 {
   "name": "individual.ertugrul-sungur.network-sync",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "displayName": "Network Sync",
   "description": "Synchronization components and network services built on Netcode for GameObjects.",
   "unity": "6000.4",
