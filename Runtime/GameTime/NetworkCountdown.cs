@@ -18,7 +18,9 @@ namespace NetworkSync.GameTime
 
     public sealed class NetworkCountdown : NetworkBehaviour, INetworkUpdateSystem
     {
-        private bool _autoAdvance = true;
+        [SerializeField] private bool _autoAdvance = true;
+
+        
         private float _syncIntervalSeconds = 1f;
         private float _timeScale = 1f;
         private bool _isRunning;
@@ -62,6 +64,12 @@ namespace NetworkSync.GameTime
 
         /// <summary>Gets the remaining duration in seconds.</summary>
         public double RemainingSeconds => _clock.Now;
+        
+        public bool AutoAdvance
+        {
+            get => _autoAdvance;
+            set => _autoAdvance = value;
+        }
 
         private void Awake()
         {
