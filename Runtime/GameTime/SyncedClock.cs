@@ -83,24 +83,22 @@ namespace NetworkSync.GameTime
                 return;
             }
 
-            double step = deltaTime * CorrectionSpeed;
-
-            if (step >= absRemaining)
+            double stepAbs = Math.Abs(deltaTime) * CorrectionSpeed;
+            if (stepAbs >= absRemaining)
             {
                 _now += _timeError;
                 _timeError = 0d;
                 return;
             }
-
             if (_timeError > 0d)
             {
-                _now += step;
-                _timeError -= step;
+                _now += stepAbs;
+                _timeError -= stepAbs;
             }
             else
             {
-                _now -= step;
-                _timeError += step;
+                _now -= stepAbs;
+                _timeError += stepAbs;
             }
         }
 

@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- `NetworkCountdown`: server-authoritative remaining-time countdown with lifecycle sync (start, pause, resume, stop, extend).
+- Clients dead-reckon locally between syncs; server snapshots are smoothly corrected via `SyncedClock`.
+
+### Fixed
+
+- `SyncedClock` reconciliation when the clock advances with a negative delta.
+
 ## [0.2.0] - 2026-08-31
 
 ### Added
